@@ -1,0 +1,111 @@
+header{
+    background-color: #24292E;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;/*16px / 16px , 32px / 16px*/
+    color:#FFFFFF;
+    z-index: 5;
+}
+header input{
+    background-color: transparent;
+}
+#menu-icon{
+    display: none;
+    flex-direction: column;
+    align-self: center;
+    width: 30px;
+}
+#menu-icon span{
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+#header-left nav{
+    display: flex;
+}
+#header-left nav > ul{
+    display: flex;
+    align-items: center;
+}
+#header-left nav > ul > li{
+    list-style: none;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 0 .5em;
+}
+header i{
+    color: #FFFFFF;
+}
+.logo-small{
+    display: none;
+}
+.logo-search{
+    display: flex;
+    align-content: center;
+}
+.logo-search > img{
+    margin-right: 0.5em;
+}
+.logo-search > input{
+    margin-left: 0.5em;
+}
+#header-left{
+    width: 100%;
+    display: flex;
+}
+#header-right .avatar{
+    width: 2em;
+    height: 2em;
+}
+.avatar > img{
+    border-radius: 50%;
+}
+#hamburger-menu{
+    background-color: #24292E;
+    color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-120%);
+}
+#hamburger-menu nav > ul{
+    padding: 2em;
+}
+#hamburger-menu nav > ul > li{
+    list-style: none;
+    cursor: pointer;
+    font-weight: 700;
+    padding: .8em 0;
+    border-bottom: 1px solid #959DA5;
+}
+#hamburger-menu nav > ul > li:last-of-type{
+    border-bottom: none;
+}
+.showNav{
+    transform: translateY(0)!important;
+}
+li > .avatar{
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+}
+
+/*Media Queries*/
+@media only screen and (max-width: 767px){
+    .logo-small{
+        display: block;
+    }
+    #header-left, #add-dropdown, #profile{
+        display: none;
+    }
+    #menu-icon{
+        display: flex;
+    }
+    #hamburger-menu{
+        display: block;
+    }
+}
